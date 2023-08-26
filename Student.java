@@ -4,10 +4,11 @@ public class Student {
     String name, email, gender, department, batch;
     int id, age, phone;
     double monthlyFee;
-     long nidNumber;
+    long nidNumber;
     Scanner input;
+
     // constructor
-    public Student(String name, String email, String gender, String department, String batch, int id,int age, int phone, long nidNumber, double monthlyFee){
+    public Student(String name, String email, String gender, String department, String batch, int id, int age, int phone, long nidNumber, double monthlyFee) {
         this.name = name;
         this.email = email;
         this.phone = phone;
@@ -18,7 +19,7 @@ public class Student {
         this.batch = batch;
         this.nidNumber = nidNumber;
         this.monthlyFee = monthlyFee;
-       this.input = new Scanner(System.in);
+        this.input = new Scanner(System.in);
     }
 
     public void setName(String name) {
@@ -101,9 +102,9 @@ public class Student {
     public long getNidNumber() {
         return nidNumber;
     }
-  
-    //display method
-    void display(){
+
+    // display method
+    void display() {
         System.out.println("Name: " + name);
         System.out.println("Email: " + email);
         System.out.println("Phone: " + phone);
@@ -116,28 +117,18 @@ public class Student {
         System.out.println("NID Number: " + nidNumber);
     }
 
-    // void display(){
-    //     System.out.println(this);
-    // }
-
-    //find method
-
-    void find(String findName){    
-        if(findName.equals(name)){
+    void find(String findName) {
+        if (findName.equals(name)) {
             display();
-        }else{
+        } else {
             System.out.println("No data found");
         }
 
-
     }
-    
-
-    // update method
 
     // 1. changeName method
-    void changeName(){
-        
+    void changeName() {
+
         System.out.print("Enter new Name: ");
         String newName = input.nextLine();
         name = newName;
@@ -145,16 +136,16 @@ public class Student {
 
     }
 
-        // change E-mail
-    void changeMail(){
+    // change E-mail
+    void changeMail() {
         System.out.print("Enter new E-mail: ");
         String newMail = input.nextLine();
         email = newMail;
         System.out.println("You have successfully changed!!");
     }
 
-        // change Phone Number
-    void changePhone(){
+    // change Phone Number
+    void changePhone() {
         System.out.print("Enter new Phone Number: ");
         int newPhone = input.nextInt();
         input.nextLine();
@@ -164,123 +155,118 @@ public class Student {
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-         Student s1 = null;
-        while(true){
+        Student s1 = null;
+        while (true) {
 
-        System.out.println("========= Main Menu =========");
-        System.out.println("1. Add Student");
-        System.out.println("2. Display");
-        System.out.println("3. Update");
-        System.out.println("4. Delete");
-        System.out.println("5. Find");
-        System.out.println("0. Exit");
-        System.out.println("=============================");
+            System.out.println("========= Main Menu =========");
+            System.out.println("1. Add Student");
+            System.out.println("2. Display");
+            System.out.println("3. Update");
+            System.out.println("4. Delete");
+            System.out.println("5. Find");
+            System.out.println("0. Exit");
+            System.out.println("=============================");
 
-        int option, select;
-        System.out.print("Enter Menu: ");
-        option = input.nextInt();
-        input.nextLine();
-
-        // perform each menu by switch statements for entering option
-       
-        switch(option){
-            case 0:
-            System.out.println("Menu is terminated");
-            return;
-
-            case 1:
-            System.out.print("Enter name: ");
-            String name = input.nextLine();
-            // input.nextLine();
-            System.out.print("Enter E-mail: ");
-            String email = input.nextLine();
-            System.out.print("Enter Phone: ");
-            int phone = input.nextInt();
-            input.nextLine();
-            System.out.print("Enter ID: ");
-            int id = input.nextInt();
-            input.nextLine();
-            System.out.print("Enter Age: ");
-            int age = input.nextInt();
-            input.nextLine();
-            System.out.print("Enter Department: ");
-            String department = input.nextLine();
-            // input.nextLine();
-            System.out.print("Enter Batch: ");
-            String batch = input.nextLine();
-            // input.nextLine();
-            System.out.print("Enter Monthly Fee: ");
-            double monthlyFee = input.nextDouble();
-            input.nextLine();
-            System.out.print("Enter Gender: ");
-            String gender = input.nextLine();
-            // input.nextLine();
-            System.out.print("Enter NID Number: ");
-             long nidNumber = input.nextLong();
+            int option, select;
+            System.out.print("Enter Menu: ");
+            option = input.nextInt();
             input.nextLine();
 
-             s1 = new Student(name, email, gender,department, batch,id, age, phone, nidNumber, monthlyFee);
-            break;
+            // perform each menu by switch statements for entering option
 
-            case 2:
-                if(s1 != null){
-                    s1.display();
-                }else{
-                    System.out.println("There is no data!!");
-                }
+            switch (option) {
+                case 0:
+                    System.out.println("Menu is terminated");
+                    return;
 
-                break;
+                case 1:
+                    System.out.print("Enter name: ");
+                    String name = input.nextLine();
+                    // input.nextLine();
+                    System.out.print("Enter E-mail: ");
+                    String email = input.nextLine();
+                    System.out.print("Enter Phone: ");
+                    int phone = input.nextInt();
+                    input.nextLine();
+                    System.out.print("Enter ID: ");
+                    int id = input.nextInt();
+                    input.nextLine();
+                    System.out.print("Enter Age: ");
+                    int age = input.nextInt();
+                    input.nextLine();
+                    System.out.print("Enter Department: ");
+                    String department = input.nextLine();
+                    // input.nextLine();
+                    System.out.print("Enter Batch: ");
+                    String batch = input.nextLine();
+                    // input.nextLine();
+                    System.out.print("Enter Monthly Fee: ");
+                    double monthlyFee = input.nextDouble();
+                    input.nextLine();
+                    System.out.print("Enter Gender: ");
+                    String gender = input.nextLine();
+                    // input.nextLine();
+                    System.out.print("Enter NID Number: ");
+                    long nidNumber = input.nextLong();
+                    input.nextLine();
 
-            case 3:
-                System.out.println("======== Changes =======");
-                System.out.println("1. Name Change");
-                System.out.println("2. E-mail Change");
-                System.out.println("3.Phone Number Change");
+                    s1 = new Student(name, email, gender, department, batch, id, age, phone, nidNumber, monthlyFee);
+                    break;
 
-                System.out.println("=======================");
-                System.out.print("Select Option: ");
-                select = input.nextInt();
-                input.nextLine();
+                case 2:
+                    if (s1 != null) {
+                        s1.display();
+                    } else {
+                        System.out.println("There is no data!!");
+                    }
 
-   
+                    break;
 
-                switch(select){
-                    case 1:
-                        if(s1 != null){
-                            s1.changeName();
-                        }else{
-                            System.out.println("You have no data!! please insert data first");
-                        }
-                        
-                        break;
-                    case 2:
-                        if(s1!=null){
-                            s1.changeMail();
-                        }else{
-                            System.out.println("You have no data!! please insert data first");
-                        }
-                        break;
-                    case 3:
-                        if(s1!=null){
-                            s1.changePhone();
-                        }else{
-                            System.out.println("You have no data!! please insert data first");
-                        }
-                     
-                }
+                case 3:
+                    System.out.println("======== Changes =======");
+                    System.out.println("1. Name Change");
+                    System.out.println("2. E-mail Change");
+                    System.out.println("3.Phone Number Change");
+
+                    System.out.println("=======================");
+                    System.out.print("Select Option: ");
+                    select = input.nextInt();
+                    input.nextLine();
+
+                    switch (select) {
+                        case 1:
+                            if (s1 != null) {
+                                s1.changeName();
+                            } else {
+                                System.out.println("You have no data!! please insert data first");
+                            }
+
+                            break;
+                        case 2:
+                            if (s1 != null) {
+                                s1.changeMail();
+                            } else {
+                                System.out.println("You have no data!! please insert data first");
+                            }
+                            break;
+                        case 3:
+                            if (s1 != null) {
+                                s1.changePhone();
+                            } else {
+                                System.out.println("You have no data!! please insert data first");
+                            }
+
+                    }
 
                 case 5:
                     System.out.print("Enter name: ");
                     String searchName = input.nextLine();
                     s1.find(searchName);
-                break;
+                    break;
+
+            }
 
         }
-        
-        
-    }
-        
-
 
     }
 }
